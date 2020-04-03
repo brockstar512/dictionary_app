@@ -9,11 +9,15 @@ console.log("this is props.wordData inside DEFINITION", props.wordData)
         //    console.log("props.wordData[0] =",wordData) 
         return <></>
     }
+    let notHere =false
    
     const wordInfo = props.wordData.map( (word, index) => {
-        if(index<=3){
+        if(word.shortdef===undefined){
+            notHere =true
+        }
+        else if(index<=3){
             const defArray = word.shortdef.map((def,i) =>{
-                return <ul>
+                return <ul key={i}>
                     <li>{`Definition ${i+1}: ${def}`}</li>
                 </ul>
             })
@@ -29,22 +33,8 @@ console.log("this is props.wordData inside DEFINITION", props.wordData)
             return <></>
         }
     })
-    // const wordDefinition = wordData.shortdef.map( (word,index) => {
-    //     // console.log("this is word", word)
-    //     if(index<=2){
-    //     return <ul key ={index}>
-    //         <li>{`Definition ${index+1}: ${word}`}</li>
-    //         </ul>
-    //     }
-    //     else{
-    //         return <></>
-    //     }
-    // })
-    // console.log("here is what we are defining in definition", props.wordData)
-    // console.log("props.wordData[0] =",props.wordData[0] )
-    // // console.log("dfgkdfj", wordDefinition)
-    // console.log("props.wordData[0].shortdef =",props.wordData[0].shortdef[0])
-    return (<>
+    if (!notHere){
+        return (<>
    
     <div className="definition">
         <h1 className ="title">Definition of {wordData.hwi.hw}</h1>
@@ -55,4 +45,11 @@ console.log("this is props.wordData inside DEFINITION", props.wordData)
    
     </>
     )}
+else{
+    return ( <div className="definition">
+    <h1 className ="title">Definition of word is not here</h1>
+    {/* <div className ="def">{wordDefinition}</div> */}
+    <div className ="sepDef">We're sorry.</div>
+</div>)
+}}
 export default Definition

@@ -36,11 +36,3 @@ export default Main
 
 
 
-//terinary function if word data is test retun dictionary list 
-//else return def
-//make go to search back to test
-//TWO PARTS
-//TERINARY OF WHAT TO SHOW
-//RESET FUNCTION
-//maybe make a function that if the word is test dont show
-//if this return this if this return that

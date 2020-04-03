@@ -112,6 +112,9 @@ body {
     align-items:center;
     display: flex;
     color:black;
+    justify-content:flex-start;
+    padding-left:30px;
+    
   }
   .header > a{
     text-decoration: none;
@@ -179,5 +182,10 @@ body {
   .title{
     color:#f3c623;
   }
+  /* @media (max-width: 767px){}
+  @media (min-width:768px) and (max-width:1023px){}
+  @media (min-width:1024px){}  */
+ 
+ 
 
   
