@@ -1,8 +1,7 @@
-import React from 'react';
-import './App.css';
+import React from "react";
 
 
-function Footer(){
-return<p className="footer">Created by Marshall Brock</p>
+function Footer() {
+  return <p className="footer">Created by Marshall Brock</p>;
 }
-export default Footer
+export default Footer;
