@@ -81,13 +81,14 @@ body {
   .App {
     text-align: center;
     /* height:611px; */
-    height:100%;
+    /* height:100%; */
     margin:0px;
   }
 
   .footer{
     background-color: #B76AC4;
     height: 50px;
+    width:100%;
     margin-bottom:0px;
     justify-content: space-around;
     align-items:center;
@@ -97,6 +98,8 @@ body {
     color:black;
     clear:both;
     align-self:flex-end;
+    position:fixed;
+    bottom:0;
     
   }
 
@@ -121,13 +124,13 @@ body {
       /* height:425px; */
       /* having trouble getting the bottom to stay */
       display:flex;
-      height:475px;
+      /* height:475px; */
       flex-direction: column;
       
   }
 
   /* search for a definition */
-  .body > h1{
+  .container > h1{
     padding-top:100px;
     color:#f3c623;
     /* text-shadow: 2px 2px 8px black; */
