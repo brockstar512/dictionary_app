@@ -188,4 +188,12 @@ body {
  
  
 
-  
+  .wordList{
+    /* text-decoration: underline;
+    /* border-bottom: 3px solid crimson  */
+    /* text-decoration-color:crimson; */ 
+  }
+
+  .wordbutton{
+    background: #8F4FA9;
+  }

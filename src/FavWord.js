@@ -1,4 +1,7 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import {getAll,update, removeWord, removeDef} from './services/api-helper'
+import './style.css' 
+import './fav.css'
 
 
 //get all and delete //update
@@ -12,8 +15,46 @@ import React from 'react'
 // getAll
 
 const FavWord = ()=>{
+    const [words, setWords] = useState([])
+    const[isLoading, setIsLoading] = useState(true)
+    const[info, setInfo] = useState(false)
+   console.log("here is get all in fav word list",words)
 
+   useEffect(()=>{
+    const makeAPICall = async () => {
+    const resp = await getAll()
+    setWords(resp)
+    setIsLoading(false)
+    }
+    makeAPICall()
+    },[])
 
+    const handleShowInfo = ()=>{
+        setInfo(!info)
+    }
 
+    const displayList = words.map((word, index)=>{
+        const definitions = word.definitions.map((d,i)=>{
+
+            return <ul key={index}>
+                <p>Part Of Speech: {d.partOfSpeech}</p>
+                <li>Definition {i+1}: {d.def}</li>
+                <li> Sentence: {d.sentence}</li>
+                </ul>
+        })
+        return (<div>
+        <div className="wordButton" onClick ={handleShowInfo}>{word.word.charAt(0).toUpperCase()+ word.word.slice(1)} </div>
+        {info && <span>{definitions}</span>}
+        </div>)
+    })
+
+    return(
+    <div className ="container">
+        <h1 className = "wordList">Word List</h1>
+        {/* underline in red */}
+        {/* <h4>Tap word to see information you have saved</h4> */}
+        {!isLoading && displayList}
+    </div>
+    )
 }
 export default FavWord

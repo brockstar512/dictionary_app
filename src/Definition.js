@@ -3,7 +3,7 @@ import React from "react";
 
 function Definition(props) {
   let notHere = false;
-  console.log("this is props.wordData inside DEFINITION", props.wordData);
+  // console.log("this is props.wordData inside DEFINITION", props.wordData);
   const wordData = props.wordData[0];
   if (!wordData) {
     //    console.log("props.wordData[0] =",wordData)

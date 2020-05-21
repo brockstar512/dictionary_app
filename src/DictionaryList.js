@@ -14,6 +14,7 @@ function DictionaryList() {
   const handleChange = e => {
     const searching = e.target.value;
     setSearchReset(searching);
+    
   };
 
   // console.log("HERE IS PROPS IN LIST. HISTORY IS SUPPOSE TO SHOW UP",props)
@@ -53,3 +54,4 @@ function DictionaryList() {
 }
 
 export default DictionaryList;
+//512 422 4259
