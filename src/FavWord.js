@@ -36,20 +36,20 @@ const FavWord = ()=>{
     const displayList = words.map((word, index)=>{
         const definitions = word.definitions.map((d,i)=>{
 
-            return <ul key={index}>
+            return <ul key={index} className>
                 <p>Part Of Speech: {d.partOfSpeech}</p>
                 <li>Definition {i+1}: {d.def}</li>
                 <li> Sentence: {d.sentence}</li>
                 </ul>
         })
-        return (<div>
-        <div className="wordButton" onClick ={handleShowInfo}>{word.word.charAt(0).toUpperCase()+ word.word.slice(1)} </div>
-        {info && <span>{definitions}</span>}
-        </div>)
+        return (<div className ="speech"><div className="innerWrapper">
+        <div className="a" onClick ={handleShowInfo}>{word.word.charAt(0).toUpperCase()+ word.word.slice(1)} </div>
+        {info && <span className ="info">{definitions}</span>}
+        </div></div>)
     })
 
     return(
-    <div className ="container">
+    <div className ="wordContainer">
         <h1 className = "wordList">Word List</h1>
         {/* underline in red */}
         {/* <h4>Tap word to see information you have saved</h4> */}

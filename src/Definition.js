@@ -6,10 +6,10 @@ function Definition(props) {
   // console.log("this is props.wordData inside DEFINITION", props.wordData);
   const wordData = props.wordData[0];
   if (!wordData) {
-    //    console.log("props.wordData[0] =",wordData)
+   
     return <></>;
   }
-  // || wordData.length===0)
+ 
 
   const wordInfo = props.wordData.map((word, index) => {
     if (word.shortdef === undefined) {
@@ -28,6 +28,7 @@ function Definition(props) {
           <div className="innerWrapper">
             <p>{`Part of Speech: ${word.fl}`}</p>
             {defArray}
+            <button className ="addWord">Add to List</button>
           </div>
         </div>
       );

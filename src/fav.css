@@ -1,0 +1,35 @@
+/* .totalWrapper{
+background-color:gray;
+
+} */
+.wordList{
+    color:#f3c623;
+    padding-top: 10%;
+}
+
+.listnumber{
+    color:#f3c623;
+}
+
+
+.addWord{
+    background-color:crimson;
+    /* opacity: 0.8; */
+    color:white;
+    border:none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    /* border-radius: 12px; */
+    /* border-radius: 50%; */
+    cursor: pointer;
+    border-radius: 16px;
+    margin-bottom:5px;
+}
+
+.addWord:hover {
+    background-color:rgb(250, 21, 21);
+    box-shadow: 0 5px 15px rgba(44, 4, 4, 0.096);
+  }
