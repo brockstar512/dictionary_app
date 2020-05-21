@@ -1,5 +1,5 @@
 import React from "react";
-
+//add word. add definition
 
 function Definition(props) {
   let notHere = false;

@@ -2,10 +2,10 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import DictionaryList from "./DictionaryList";
 import Definition from "./Definition";
+import FavWord from "./FavWord"
 
 function Main(props) {
-  console.log("here is what props is passing in MAIN", props.wordData);
-  console.log("Main has components. Somehow its beeing passed to definition");
+
   return (
     <div>
       <Switch>
@@ -14,6 +14,7 @@ function Main(props) {
           path="/definition"
           render={() => <Definition wordData={props.wordData} />}
         />
+        <Route path ="/wordslist" component ={FavWord}/>
         <Redirect to="/" />
       </Switch>
 
