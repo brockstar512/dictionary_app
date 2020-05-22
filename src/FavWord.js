@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {getAll,update, removeWord, removeDef} from './services/api-helper'
+import {getAll, update, removeWord, removeDef} from './services/api-helper'
 import './style.css' 
 import './fav.css'
 

@@ -5,6 +5,10 @@ background-color:gray;
 .wordList{
     color:#f3c623;
     padding-top: 10%;
+    /* text-decoration: underline; */
+    /* border-bottom: 4px solid crimson;
+    margin-left:20%;
+    margin-right:20%; */
 }
 
 .listnumber{
@@ -33,3 +37,7 @@ background-color:gray;
     background-color:rgb(250, 21, 21);
     box-shadow: 0 5px 15px rgba(44, 4, 4, 0.096);
   }
+
+  /* .speech:hover {
+    background-color: yellow;
+  } */
