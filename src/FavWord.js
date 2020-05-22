@@ -14,6 +14,7 @@ import './fav.css'
 // create
 // getAll
 
+
 const FavWord = ()=>{
     const [words, setWords] = useState([])
     const[isLoading, setIsLoading] = useState(true)
@@ -33,17 +34,24 @@ const FavWord = ()=>{
         setInfo(!info)
     }
 
+    const handleRemoveWord = async(id)=>{
+        const json = await removeWord(id)
+        const otherWords = words.filter(singleWord=> singleWord._id !== id)
+        setWords(otherWords)
+    }
+   
     const displayList = words.map((word, index)=>{
         const definitions = word.definitions.map((d,i)=>{
-
+            console.log("The is word that I need id to delte",word)
             return <ul key={index} className>
                 <p>Part Of Speech: {d.partOfSpeech}</p>
                 <li>Definition {i+1}: {d.def}</li>
                 <li> Sentence: {d.sentence}</li>
                 </ul>
+                
         })
         return (<div className ="speech"><div className="innerWrapper">
-        <div className="a" onClick ={handleShowInfo}>{word.word.charAt(0).toUpperCase()+ word.word.slice(1)} </div>
+        <div className="a" onClick ={handleShowInfo}>{word.word.charAt(0).toUpperCase()+ word.word.slice(1)} <button onClick={()=>handleRemoveWord(word._id)}>remove Word</button></div>
         {info && <span className ="info">{definitions}</span>}
         </div></div>)
     })
@@ -54,6 +62,7 @@ const FavWord = ()=>{
         {/* underline in red */}
         {/* <h4>Tap word to see information you have saved</h4> */}
         {!isLoading && displayList}
+        
     </div>
     )
 }
