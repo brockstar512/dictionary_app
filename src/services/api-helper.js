@@ -38,8 +38,9 @@ export const getByName = async (name) => {
   };
 
 //   router.post('/adddef/:WordId', controller.AddByDef)
-  export const AddByDef = async (WordId) => {
-    const resp = await api.post(`/adddef/${WordId}`);
+  export const AddByDef = async (WordId, body) => {
+    console.log("this is the word id from api helper", WordId)
+    const resp = await api.post(`/adddef/${WordId}`, body);
     return resp.data;
   };//this is atomatically adding the add def we have to send in whats in the 
   //template literals in the async whereever I call the function. i am sending in the wordID as an argument

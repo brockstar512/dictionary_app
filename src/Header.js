@@ -7,7 +7,7 @@ function Header() {
   //pull in get all and render the amount that is in it
   const [words, setWords] = useState([])
   const[isLoading, setIsLoading] = useState(true)
- console.log("here is get all",words.length)
+//  console.log("here is get all",words.length)
 
   useEffect(()=>{
     const makeAPICall = async () => {

@@ -17,9 +17,9 @@ background-color:gray;
 
 
 .addWord{
-    background-color:crimson;
+    background-color:#DDD8B8;
     /* opacity: 0.8; */
-    color:white;
+    color:#272932;
     border:none;
     padding: 10px;
     text-align: center;
@@ -31,13 +31,27 @@ background-color:gray;
     cursor: pointer;
     border-radius: 16px;
     margin-bottom:5px;
+    /* margin-left:50%; */
 }
 
 .addWord:hover {
-    background-color:rgb(250, 21, 21);
+    background-color:#E7E4C4;
     box-shadow: 0 5px 15px rgba(44, 4, 4, 0.096);
   }
 
   /* .speech:hover {
     background-color: yellow;
   } */
+  .removeItem{
+    background-color:#DDD8B8;
+    border-radius: 16px;
+    border:none;
+    cursor: pointer;
+    
+  }
+  .removeItem:hover{
+    background-color:rgb(250, 21, 21);
+    box-shadow: 0 5px 15px rgba(44, 4, 4, 0.096);
+    color:white;
+    opacity: 0.8;
+  }
