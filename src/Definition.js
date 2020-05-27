@@ -15,14 +15,16 @@ const[presID, setPresID] = useState()
   }else{
     
   }
-
+//iterate over the array
+//each iteration I send the def with the current indexed word
 
 
 const handleAddData =async(e) =>{
 
- console.log('here is the shortdef.',e.shortdef)
-//  console.log('here is the spread opertaor.',[...e.shortdef])
- 
+// console.log('here is the shortdef.',e.shortdef)
+// console.log('here is the spread opertaor.',[...e.shortdef])
+console.log("here is e ",e)
+console.log("here is e stems", e.meta.stems[0])
   const json = await create(
     {
     "word": e.meta.stems[0],
@@ -32,30 +34,27 @@ const handleAddData =async(e) =>{
   setPresID(json._id)
   let idPassingBy =json._id
 
-  console.log("THIS IS THE ID", json. _id)
-  console.log("THIS IS THE ID WITHOUT A SPACE", json._id)
-  console.log("COULD TRY PASSING THIS", e.shortdef[0])
-  let mostCommonDef=e.shortdef[0]
+  let arrayOfDef = e.shortdef
+
   let details = e
-  addDefinition(idPassingBy, mostCommonDef,details)
 
 
+  addDefinition(idPassingBy, arrayOfDef,details)
 }
 
 const addDefinition =async(WordId,d,deets)=>{
-  console.log("HERE IS E", d)
-  console.log('HERE IS id', WordId)
-  //if i can manage to debug it pass it through wil a large array
+
   const defjson = await AddByDef( WordId,{
-    "def": d,
+    "def": [...d],
     "partOfSpeech":deets.fl,
     "sentence": ""
   })
-  console.log("here is the definition json ",defjson)
+  // console.log("here is the definition json ",defjson)
   }
 
 
   const wordInfo = props.wordData.map((word, index) => {
+    // console.log("HERE IS props.WORD DATA ", props.wordData)
     if (word.shortdef === undefined) {
       notHere = true;
     } else if (index <= 3) {
@@ -73,7 +72,7 @@ const addDefinition =async(WordId,d,deets)=>{
           <div className="innerWrapper">
             <p>{`Part of Speech: ${word.fl}`}</p>
             {defArray}
-            <button className ="addWord"  onClick={()=>handleAddData(wordData)}  >Add to List</button>
+            <button className ="addWord"  onClick={()=>handleAddData(word)}  >Add to List</button>
           
           </div>
         </div>

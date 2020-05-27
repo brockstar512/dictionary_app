@@ -2,11 +2,12 @@ import axios from "axios"
 
 //this is the first have of the link and below in the functions is the last half + the retreived data
 const api = axios.create({
-    baseURL: "https://dictionary-marshall.herokuapp.com/routes"
+    baseURL: "https://dict-app-brock-array.herokuapp.com/routes"
   });
-
+  
+  //
 // mongodb://localhost/favorite_words
-
+//https://dictionary-marshall.herokuapp.com/routes
   export const getAll = async () => {
     const resp = await api.get("/");
     return resp.data;

@@ -29,10 +29,7 @@ const FavWord = ()=>{
     }
     makeAPICall()
     },[])
-    // onClick ={handleShowInfo}
-    const handleShowInfo = ()=>{
-        setInfo(!info)
-    }
+
 
     const handleRemoveWord = async(id)=>{
         const json = await removeWord(id)
@@ -42,11 +39,13 @@ const FavWord = ()=>{
    
     const displayList = words.map((word, index)=>{
         const definitions = word.definitions.map((d,i)=>{
-            // console.log("The is word that I need id to delte",word)
-            return <ul key={index} className>
+            const individualDef =d.def.map((ind, i)=>{
+                return <div className="indDef">Definition {i+1}: {ind}</div>
+            })
+            
+            return <ul key={index} >
                 <p>Part Of Speech: {d.partOfSpeech}</p>
-                <li>Definition {i+1}: {d.def}</li>
-                <li> Sentence: {d.sentence}</li>
+                <li> {individualDef}</li>
                 </ul>
                 
         })
@@ -60,8 +59,7 @@ const FavWord = ()=>{
     return(
     <div className ="wordContainer">
         <h1 className = "wordList">Word List</h1>
-        {/* underline in red */}
-        {/* <h4>Tap word to see information you have saved</h4> */}
+
         {!isLoading && displayList}
         
     </div>
