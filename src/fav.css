@@ -1,14 +1,8 @@
-/* .totalWrapper{
-background-color:gray;
 
-} */
+
 .wordList{
     color:#f3c623;
-    padding-top: 10%;
-    /* text-decoration: underline; */
-    /* border-bottom: 4px solid crimson;
-    margin-left:20%;
-    margin-right:20%; */
+    padding-top: 4%;
 }
 
 .listnumber{
@@ -26,12 +20,9 @@ background-color:gray;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
-    /* border-radius: 12px; */
-    /* border-radius: 50%; */
     cursor: pointer;
     border-radius: 16px;
     margin-bottom:5px;
-    /* margin-left:50%; */
 }
 
 .addWord:hover {
@@ -56,3 +47,5 @@ background-color:gray;
   .indDef{
       padding-bottom: 15px;
   }
+
+

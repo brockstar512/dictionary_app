@@ -3,10 +3,6 @@ import {getAll, update, removeWord, removeDef} from './services/api-helper'
 import './style.css' 
 import './fav.css'
 
-
-
-
-
 const FavWord = ()=>{
     const [words, setWords] = useState([])
     const[isLoading, setIsLoading] = useState(true)
