@@ -3,7 +3,6 @@ import { Submit } from "./App";
 import { Redirect } from "react-router-dom";
 import "./button.scss";
 
-// import ReactDOM from 'react-dom';
 
 function DictionaryList() {
   const submit = useContext(Submit);
@@ -14,16 +13,12 @@ function DictionaryList() {
   const handleChange = e => {
     const searching = e.target.value;
     setSearchReset(searching);
-    
   };
-
-  // console.log("HERE IS PROPS IN LIST. HISTORY IS SUPPOSE TO SHOW UP",props)
   const handleSubmit = e => {
     e.preventDefault();
     submit(wordQ);
     setSearchReset("");
-    //dont know if i'll need^
-    // return <Redirect to="/definition" />
+
     setRedirect(true);
   };
   if (!redirect) {
@@ -32,7 +27,6 @@ function DictionaryList() {
         <div className="container">
           <h1>Search for a Definition</h1>
           <form onSubmit={handleSubmit}>
-            {/* <label> Search for you word here</label> */}
             <input
               id="wordQ"
               type="text"
@@ -47,7 +41,6 @@ function DictionaryList() {
         </div>
       </div>
     );
-    //on submit link to?
   } else {
     return <Redirect to="/definition" />;
   }

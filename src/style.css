@@ -1,70 +1,4 @@
-/*FONTS
-font-family: 'Open Sans', sans-serif;
-font-family: 'Rubik', sans-serif;
-*/
 
-
-/*color
-dark purple
-#6B3791
-
-middle purple
-#9251AC
-
-light purple
-#B76AC4
-
-text box
-#E1E8FA
-
-sky blue
-#d2fafb
-
-rose pink
-#FE346E
-
-teal
-00bdaa
-
-
-dark purple
-400082
-
-hot pink
-fe346e
-
-tan 
-#f1e7b6
-
-yellow dark
-f3c623
-
-green 
-#BED067
-
-box color
-#f4eeff
-https://colorhunt.co/palette/174976
-
-
-cool search bar
-https://codepen.io/AlbertFeynman/pen/BPvzWZ
-many options
-https://www.mockplus.com/blog/post/search-bar-design
-
-
-color palletes
-gold+purple
-https://colorhunt.co/palette/178346
-shades of purple
-https://colorhunt.co/palette/174976
-wide array
-https://colorhunt.co/palette/177825
-
-
-
-
-*/
 html, body {
   width: 100%;
   height: 100%;
@@ -75,16 +9,11 @@ body {
     background-color:#9251AC;
     display: flex;
     flex-direction: column;
-    /* height:100%; */
-   
   }
   .App {
     text-align: center;
-    /* height:611px; */
-    /* height:100%; */
     margin:0px;
   }
-
   .footer{
     background-color: #B76AC4;
     height: 50px;
@@ -94,7 +23,6 @@ body {
     align-items:center;
     display: flex;
     box-shadow: 0px -5px 100px black;
-    /* color:#00bdaa; */
     color:black;
     clear:both;
     align-self:flex-end;
@@ -102,7 +30,6 @@ body {
     bottom:0;
     
   }
-
   .header{
     background-color: #B76AC4;
     margin-top:0px;
@@ -118,40 +45,24 @@ body {
   }
   .header > a{
     text-decoration: none;
-    color:black;
-    
+    color:black; 
   }
-
-
   .body{
-      /* height:425px; */
-      /* having trouble getting the bottom to stay */
       display:flex;
-      /* height:475px; */
       flex-direction: column;
-      
   }
-
-  /* search for a definition */
   .container > h1{
     padding-top:100px;
     color:#f3c623;
-    /* text-shadow: 2px 2px 8px black; */
   }
-
   ul{
     list-style-type: none;
     padding-left:25px;
     text-align: left;
   }
   .definition{
-      /* background-color:#f4eeff; */
       margin:0 5px;
-      
   }
- 
-
- /* speech is the outisde wrapper of the definition */
    .speech{
     background-color:#dcd6f7;
     padding-top:5px; 
@@ -161,24 +72,16 @@ body {
     margin-left: 5px;
     padding-left:5px;
     padding-right:5px;
-    /* opacity: 0.5; */
    }
-  /* space between footer and last def */
    .speech:last-child {
     margin-bottom:100px;
   }
-/*   
- what the light inner def is. what I had before what just this 
- inside .speech */
 .innerWrapper{
     background-color: #f4eeff;
     padding-top:5px; 
     padding-bottom:5px;
-    /* margin-bottom: 10px; */
     margin-bottom: 5px;
 }
-
-/* what the definition title is */
   .title{
     color:#f3c623;
   }
@@ -187,10 +90,3 @@ body {
   @media (min-width:1024px){}  */
  
  
-
-  /* .wordList{
-    color:#f3c623;
-    /* text-decoration: underline;
-    /* border-bottom: 3px solid crimson  */
-    /* text-decoration-color:crimson; */ 
-  /* }  */

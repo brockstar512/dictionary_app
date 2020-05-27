@@ -8,7 +8,6 @@ function Header() {
   const [words, setWords] = useState([])
   const[isLoading, setIsLoading] = useState(true)
 
-
   useEffect(()=>{
     const makeAPICall = async () => {
     const resp = await getAll()

@@ -17,9 +17,6 @@ function Main(props) {
         <Route path ="/wordslist" component ={FavWord}/>
         <Redirect to="/" />
       </Switch>
-
-      {/* <DictionaryList />
-    <Definition wordData={props.wordData}/> */}
     </div>
   );
 }
