@@ -1,0 +1,51 @@
+
+
+.wordList{
+    color:#f3c623;
+    padding-top: 4%;
+}
+
+.listnumber{
+    color:#f3c623;
+}
+
+
+.addWord{
+    background-color:#DDD8B8;
+    /* opacity: 0.8; */
+    color:#272932;
+    border:none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 16px;
+    margin-bottom:5px;
+}
+
+.addWord:hover {
+    background-color:#E7E4C4;
+    box-shadow: 0 5px 15px rgba(44, 4, 4, 0.096);
+  }
+
+  .removeItem{
+    background-color:#DDD8B8;
+    border-radius: 16px;
+    border:none;
+    cursor: pointer;
+    
+  }
+  .removeItem:hover{
+    background-color:rgb(250, 21, 21);
+    box-shadow: 0 5px 15px rgba(44, 4, 4, 0.096);
+    color:white;
+    opacity: 0.8;
+  }
+
+  .indDef{
+      padding-bottom: 15px;
+  }
+
+

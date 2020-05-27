@@ -1,8 +1,8 @@
+//button styling created by Jove Angelevski
 //https://codepen.io/brockstar512/pen/yLNwPNp
-//created by Jove Angelevski
+
 * {
-  // margin: 0;
-  // padding: 0;
+
   box-sizing: border-box;
 }
 
@@ -10,11 +10,6 @@ html, body {
   width: 100%;
   height: 100%;
 }
-
-// body {
-//   background: #252525;
-// }
-
 .container {
   position: absolute;
   margin: auto;
@@ -38,7 +33,6 @@ html, body {
     transition: all 1s;
     z-index: 4;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-    // box-shadow: 0 0 25px 0 crimson;
     &:hover {
       cursor: pointer;
     }
@@ -83,15 +77,13 @@ html, body {
     height: 50px;
     outline: none;
     border: none;
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background: crimson;
     color: white;
     text-shadow: 0 0 10px crimson;
     padding: 0 80px 0 20px;
     border-radius: 30px;
-    box-shadow: 0 0 25px 0 black,//*
+    box-shadow: 0 0 25px 0 black,
                 0 20px 25px 0 rgba(0, 0, 0, 0.2);
-    // box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5);
     transition: all 1s;
     opacity: 0;
     z-index: 5;
@@ -101,7 +93,7 @@ html, body {
       cursor: pointer;
     }
     &:focus {
-      width: 300px;// width: 200px;
+      width: 300px;
       opacity: 1;
       cursor: text;
     }
@@ -133,7 +125,3 @@ html, body {
   }
 }
 
-//To do
-//-move buttong over when clicked
-//get words to be responsive
-//get footer to stick to bottom
