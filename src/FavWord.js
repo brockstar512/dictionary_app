@@ -4,22 +4,14 @@ import './style.css'
 import './fav.css'
 
 
-//get all and delete //update
 
-// AddByDef
-// getByName
-// removeDef
-// removeWord
-// update
-// create
-// getAll
 
 
 const FavWord = ()=>{
     const [words, setWords] = useState([])
     const[isLoading, setIsLoading] = useState(true)
     const[info, setInfo] = useState(false)
-//    console.log("here is get all in fav word list",words)
+
 
    useEffect(()=>{
     const makeAPICall = async () => {
@@ -31,10 +23,15 @@ const FavWord = ()=>{
     },[])
 
 
-    const handleRemoveWord = async(id)=>{
+    const handleRemoveWord = async(id,name)=>{
+        const result =window.confirm(`are you sure you want to remove ${name.word}?`)
+        if(result){
         const json = await removeWord(id)
         const otherWords = words.filter(singleWord=> singleWord._id !== id)
-        setWords(otherWords)
+        setWords(otherWords)}
+        else{
+            return
+        }
     }
    
     const displayList = words.map((word, index)=>{
@@ -51,7 +48,7 @@ const FavWord = ()=>{
         })
         return (<div className ="speech"><div className="innerWrapper">
         <div className="a">{word.word.charAt(0).toUpperCase()+ word.word.slice(1)}</div>
-        <button className ="removeItem" onClick={()=>handleRemoveWord(word._id)}>remove Word</button>
+        <button className ="removeItem" onClick={()=>handleRemoveWord(word._id,word)}>remove Word</button>
          <span className ="info">{definitions}</span>
         </div></div>)
     })

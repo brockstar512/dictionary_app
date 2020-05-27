@@ -6,7 +6,6 @@ import "./button.scss";
 
 function DictionaryList() {
   const submit = useContext(Submit);
-  console.log("here the ocntext var is on list ", submit);
   const [wordQ, setSearchReset] = useState("");
   const [redirect, setRedirect] = useState(false);
 
@@ -47,4 +46,3 @@ function DictionaryList() {
 }
 
 export default DictionaryList;
-//512 422 4259
